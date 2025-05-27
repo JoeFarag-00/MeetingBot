@@ -2,11 +2,8 @@ import os
 from groq import Groq, APIError
 from dotenv import load_dotenv
 import config
-import math # Added for ceiling division
+import math 
 
-# --- Constants for Chunking ---
-# Adjust these based on testing and observed token limits vs character counts
-# Aim for chunk size well below the API limit (e.g., 6k tokens might roughly be 15k-20k chars)
 TARGET_CHUNK_CHAR_LENGTH = 10000
 CHUNK_OVERLAP_CHAR_LENGTH = 500 # Overlap to maintain context
 
